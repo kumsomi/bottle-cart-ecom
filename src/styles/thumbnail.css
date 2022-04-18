@@ -1,0 +1,9 @@
+.bottle-category{
+    height: 10rem;
+    width:10rem;
+    margin:2rem;
+    cursor:pointer;
+  }
+.bottle-category:hover{
+    transform: scale(1.2);
+}

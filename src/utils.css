@@ -1,0 +1,21 @@
+:root{
+    /* colors */
+  /* --primary-color: #456990; */
+  --primary-color:#DAA8B1;
+  --secondary-color: #ffffff;
+  /* --secondary-color:#394867; */
+  --primary-color:#394867;
+
+  /* --cta-color: #9C5578; */
+  --cta-color: #DAA8B1;
+
+  /* --cta-color: #eeb868; */
+  --screen-background-color:  #f3f4f6;
+  --background-color:  #394867;
+  /* #d4d4d8 */
+  --hover-color: #d4d4d8;
+  --shadow-color: #394867 ;
+  /* #9ca3af */
+  --heading-font-1: #f1f5f9;
+  --card-color:#ffffff;
+}

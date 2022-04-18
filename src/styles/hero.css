@@ -1,0 +1,36 @@
+.main-head .background-image{
+    background: url("../../src/assets/home.png");
+    height:45rem;
+    border-radius: 1rem;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+@media(max-width:992px){
+  .main-head .background-image{
+    background: url("../../src/assets/home.png");
+    height: 25rem;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+}
+@media(max-width:768px) {
+  .main-head .background-image{
+    background: url("../../src/assets/home.png");
+    height: 20rem;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+}
+
+@media(max-width:480px) {
+    .main-head .background-image{
+        background: url("../../src/assets/home-short.png");
+        height: 40rem;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover; /* Resize the background image to cover the entire container */
+      }
+}

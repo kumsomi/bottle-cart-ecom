@@ -1,42 +1,57 @@
 import "./App.css";
-import logo from "./logo.png";
+// import { Footer } from "./components/Footer";
+// import { NavBar } from "./components/NavBar";
+// import { Home } from "./pages/Home/Home";
+import { Routes, Route } from "react-router-dom";
+import { Home, ProductListing, Cart, Wishlist, Login, Signup } from "./pages";
+import { Footer, NavBar, Toast } from "./components";
+import { ToastProvider, FilterProvider, CartProvider } from "./context";
+// import Mockman from "mockman-js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
+    // <CartProvider>
+    //   <FilterProvider>
+    //     <ToastProvider>
+    //       {/* <Toast />
+    //       <NavBar /> */}
+    //       <div className="App">
+    //         <Routes>
+    //           <Route path="/" exact element={<Home />} />
+    //           <Route path="/products" element={<ProductListing />} />
+    //           <Route path="/cart" element={<Cart />} />
+    //           <Route path="/wishlist" element={<Wishlist />} />
+    //           <Route path="/login" element={<Login />} />
+    //           <Route path="/signup" element={<Signup />} />
+    //           {/* <Route path="/mock" element={<Mockman />} /> */}
+    //         </Routes>
+    //       </div>
+    //       <Footer />
+    //     </ToastProvider>
+    //   </FilterProvider>
+    // </CartProvider>
+    <>
+    <CartProvider>
+    <FilterProvider>
+      <ToastProvider>
+        <Toast/>
+        <NavBar/>
+        <div>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/products" element={<ProductListing />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} />           
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>           
+        {/* <Home/> */}
         </div>
-      </header>
-    </div>
+        <Footer/>
+      </ToastProvider>
+    </FilterProvider>
+    </CartProvider>
+    </>
   );
 }
 

@@ -1,0 +1,19 @@
+.filter-heading{
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color:var(--secondary-color);
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    margin:1rem 0;
+}
+.filter-btn{
+    font-family: 'Roboto Serif', sans-serif;
+    /* color:var(--cta-color); */
+    font-weight: bold;
+    margin-left: auto;
+    /* border: 0; */
+}
+.filter-btn:hover{
+    background-color: var(--primary-color);
+    color:var(--cta-color);
+}

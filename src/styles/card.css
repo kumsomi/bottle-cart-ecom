@@ -1,0 +1,31 @@
+.card{
+    background-color: #ffffff;
+    margin-bottom:2rem;
+    margin:1rem;
+    padding: 1rem;
+    transition: transform .2s; 
+}
+.card:hover{
+    /* cursor: pointer; */
+    box-shadow: 0 0 5px 2px var(--ctas-color);
+}
+.card-image-container{
+    background-color: white;
+    border:0;
+}
+.card-image-container:hover{
+    opacity: 0.8;
+}
+
+.card-btn{
+    background-color: var(--primary-color);
+    color:var(--cta-color);
+    border: 3px solid var(--primary-color);
+}
+
+.card-btn:hover{
+    background-color: var(--cta-color);
+    color:var(--primary-color);
+    border: 0;
+    cursor: pointer;
+}
