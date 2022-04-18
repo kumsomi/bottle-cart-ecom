@@ -5,13 +5,3 @@ export const getCheckedProducts = (filterState, productList) => {
         : true
     );
   };
-
-  // Aluminium: false,
-  //   Steel: false,
-  //   Glass: false,
-  //   Plastic: false,
-  //   Disposable: false,
-  //   OldSchool:false,
-  //   Baby:false,
-  //   price: 1500,
-  //   searchKeyword: "",

@@ -6,9 +6,11 @@ const Toast = () => {
     <div id="snackbar">
         <div class="toast-head">
             <h3 class="h-3 toast-heading ">RETRY</h3>
-            <button id="toast-close" 
-            onClick={() => toastDispatch({ type: "HIDE", payload: "" })}>
-                <i class="fas fa-times" aria-hidden="true"></i>
+            <button 
+              id="toast-close" 
+              onClick={() => toastDispatch({ type: "HIDE", payload: "" })}
+            >
+              <i class="fas fa-times" aria-hidden="true"></i>
             </button>
         </div>
         <p class="para-3">

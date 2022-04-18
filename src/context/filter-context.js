@@ -7,10 +7,14 @@ const FilterProvider = ({ children }) => {
   const [filterState, filterDispatch] = useReducer(filterReducer, {
     sortBy: null,
     rating: 0,
-    Albums: false,
-    Wearables: false,
-    Accessories: false,
-    price: 7000,
+    Aluminium: false,
+    Steel: false,
+    Glass: false,
+    Plastic: false,
+    Disposable: false,
+    OldSchool:false,
+    Baby:false,
+    price: 1500,
     searchKeyword: "",
   });
   return (

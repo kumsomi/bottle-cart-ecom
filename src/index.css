@@ -9,7 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Raleway', sans-serif;
   font-family: 'Roboto Serif', sans-serif;
-  color:var(--primary-color);
 }
 
 code {
