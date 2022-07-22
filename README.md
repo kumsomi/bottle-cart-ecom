@@ -1,9 +1,7 @@
 ## Bottle Cart
 ![icon-ecom](https://user-images.githubusercontent.com/54243544/180428735-8fa12051-83d5-48e1-b3f5-363a3d8e3631.png)
 
-BottleCart is an Ecommerce websites which sell all kinds of bottles.
-
-It is one stop solution for keeping you hydrated by adding various colors and mood.
+BottleCart is an eCommerce website that sells all kinds of bottles. It is the one-stop solution for keeping you hydrated by adding various colors and moods.
 
 Demo Link: https://bottlecart.netlify.app/
 
