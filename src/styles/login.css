@@ -1,24 +1,21 @@
 .login{
     border: 0.5rem solid var(--primary-color);
-    width: fit-content;
-    padding: 3rem;
+    width: min-content;
+    height: min-content;
     display: flex;
-    margin: 5rem auto;
+    margin: 3rem auto;
     flex-direction: column;
 }
 .login-btn{
-    width: 100%;
+    width: 90%;
 }
 .login>*{
     font-size: large;
     padding: 1rem;
 }
-.form>*{
-    padding: 1rem;
-}
+
 .login-input{
-    padding: 1rem;
-    margin: 1rem;
+    padding: 0.5rem;
 }
 .form-div{
     display: flex;
