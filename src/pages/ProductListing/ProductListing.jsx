@@ -1,9 +1,7 @@
-// import { VerticalCard, FilterButton, Filter } from "../../components";
 import { useToast, useFilter } from "../../context";
 import { useState, useEffect } from "react";
 import { setTitle } from "../../utils/set-title";
 import axios from "axios";
-// import { products } from "../../backend/db/products";
 import { Filter, VerticalCard } from "../../components";
 import { useLocation } from "react-router-dom";
 import {
@@ -34,10 +32,6 @@ const ProductListing = () => {
           data: { products },
         } = await axios.get("/api/products");
         setProductList(products);
-      // }
-      // catch{
-      //   console.log(err);
-      // }
         toastDispatch({ type: "HIDE", payload: "" });
         filterDispatch({
           type: "FILTER_BY_CATEGORY",
@@ -57,13 +51,20 @@ const ProductListing = () => {
   return (
     <div >
       <main>
-            <h2 class="main-heading h-3 flex justify-c-ctr align-i-ctr">BottleCart Products</h2>
-            <div class="grid grid-product-cols-2">
-              <Filter/>
-              <div class="products flex flex-wrap">
-                {sortedProductList.map((item)=> 
-                <VerticalCard product={item} key={item._id}/>)
-                }
+            <div class="product-list">
+              {/* grid grid-product-cols-2 */}
+              <div className="product-list-filter">
+                <Filter/>
+              </div>
+              <div class="product-list-main ">
+                <h2 class="main-heading h-3 ">BottleCart Products</h2>
+
+                <div className="product-wrapper">
+                  
+                  {sortedProductList.map((item)=> 
+                  <VerticalCard product={item} key={item._id}/>)
+                  }
+                </div>
               </div>
             </div>
         </main>

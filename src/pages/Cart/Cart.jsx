@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { CartProduct } from "../../components";
 import { useCart, useToast } from "../../context";
 
-// import { CartProduct } from "../../components";
-
 import { setTitle } from "../../utils/set-title";
 const Cart = () => {
   const title = "The BottleCart Closet | Cart";
