@@ -12,13 +12,11 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <ToastProvider>
         <CartProvider>
           <FilterProvider>
             <App />
           </FilterProvider>
         </CartProvider>
-      </ToastProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
