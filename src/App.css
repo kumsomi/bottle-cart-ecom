@@ -2,9 +2,23 @@
 @import url('styles/index.css');
 
 .App {
-  text-align: center; 
+  display: grid;
+  grid-template-rows: 15vh 68vh 17vh ;
+  grid-template-areas: 
+  "first"
+  "second"
+  "third";
 }
-
+.nav-mode{
+  grid-area: nav;
+}
+.main-mode{
+  grid-area: second;
+  overflow: auto;
+}
+.footer-mode{
+  grid-area: third;
+}
 .head-heading{
   color: var(--secondary-color);
 }

@@ -6,13 +6,13 @@ import { ToastProvider, FilterProvider, CartProvider } from "./context";
 
 function App() {
   return (
-    <>
+    <div className="App">
     <CartProvider>
     <FilterProvider>
       <ToastProvider>
         <Toast/>
-        <NavBar/>
-        <div>
+        <NavBar className="navigation-mode"/>
+        <div className="main-mode">
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/products" element={<ProductListing />} />
@@ -22,11 +22,12 @@ function App() {
           <Route path="/signup" element={<Signup />} />
         </Routes>           
         </div>
-        <Footer/>
+        <Footer className="footer-mode"/>
       </ToastProvider>
     </FilterProvider>
     </CartProvider>
-    </>
+    </div>
+
   );
 }
 
