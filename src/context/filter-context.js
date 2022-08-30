@@ -9,6 +9,7 @@ const FilterProvider = ({ children }) => {
     rating: 0,
     Aluminium: false,
     Steel: false,
+    Copper:false,
     Glass: false,
     Plastic: false,
     Disposable: false,

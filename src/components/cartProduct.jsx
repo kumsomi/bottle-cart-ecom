@@ -1,7 +1,9 @@
 import { useCart } from "../context";
+import { useToast } from "../custom-hooks/useToast";
 
 const CartProduct = ({ product }) => {
   const { cartDispatch } = useCart();
+  const {showToast}=useToast();
     return(<div>
         <div class="products flex flex-wrap">
             <article class="card horizontal card-shadow">
@@ -40,11 +42,13 @@ const CartProduct = ({ product }) => {
               <button
                 disabled
                 className="quantity btn primary-btn"
-                onClick={() =>
+                onClick={() =>{
                   cartDispatch({
                     type: "DECREASE_CART_QUANTITY",
                     payload: product,
                   })
+                  showToast("Quantity decreased", "info");
+                }
                 }
               > -
                 {/* <i className="fas fa-minus"></i> */}
@@ -52,11 +56,13 @@ const CartProduct = ({ product }) => {
             ) : (
               <button
                 className="quantity btn primary-btn"
-                onClick={() =>
+                onClick={() =>{
                   cartDispatch({
                     type: "DECREASE_CART_QUANTITY",
                     payload: product,
                   })
+                  showToast("Quantity decreased", "info");
+                }
                 }
               >
                 -
@@ -66,24 +72,27 @@ const CartProduct = ({ product }) => {
             <span>{product.quantity}</span>
             <button
               className="quantity btn primary-btn"
-              onClick={() =>
+              onClick={() =>{
                 cartDispatch({
                   type: "INCREASE_CART_QUANTITY",
                   payload: product,
                 })
+                showToast("increased quantity", "info");
+              }
               }
             >
               +
-              {/* <i className="fa fa-plus"></i> */}
             </button>
             </div>          
             <div class="horizontal-card-btn-container flex-ac">
               <button class="card-btn card-cart horizintal-card-btn-primary"
-                onClick={() =>
+                onClick={() =>{
                   cartDispatch({
                     type: "REMOVE_FROM_CART",
                     payload: product,
                   })
+                  showToast("Item Removed from cart", "success");
+                }
                 }
               >
                 <span class="cart-icon "><i class="fas fa-shopping-cart"></i></span>
@@ -91,11 +100,13 @@ const CartProduct = ({ product }) => {
               </button>
 
               <button class="card-btn horizontal-card-btn-secondary"
-                onClick={() =>
+                onClick={() =>{
                   cartDispatch({
                     type: "MOVE_TO_WISHLIST",
                     payload: product,
                   })
+                  showToast("Item is moved to wishlist", "success");
+                }
                 }
               >
                 <span class="wishlist-icon"><i class="far fa-heart"></i></span>

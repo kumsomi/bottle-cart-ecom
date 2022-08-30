@@ -1,7 +1,7 @@
 const Footer=()=>{
     return(
         <footer class="footer flex flex-direction-row flex-wrap text-left p-1">
-            <div>
+            {/* <div>
                 <h2 class="h-3">BottleCart</h2>
             </div>
             
@@ -9,7 +9,8 @@ const Footer=()=>{
                 <h4 class="para-3">Contact us</h4> 
                 <p class="para-4">Yelahanka</p>
                 <p class="para-4">Bangalore, India</p>
-            </div>
+            </div> */}
+            {/* <div>Made with </> by </div> */}
         </footer>
     );
 }

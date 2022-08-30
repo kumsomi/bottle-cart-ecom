@@ -20,6 +20,10 @@ export const categories = [
   },
   {
     _id: uuid(),
+    category: "Copper",
+  },
+  {
+    _id: uuid(),
     category: "Plastic",
   },
   {

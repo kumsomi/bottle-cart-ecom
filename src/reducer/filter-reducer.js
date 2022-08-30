@@ -17,6 +17,7 @@ export const filterReducer = (state, action) => {
           Aluminium: false,
           Steel: false,
           Glass: false,
+          Copper:false,
           Plastic: false,
           Disposable: false,
           School:false,

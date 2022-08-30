@@ -11,9 +11,9 @@ const Home=()=>{
     const title = "BottleCart | Home";
     setTitle(title);
     const { toastDispatch } = useToast();
-    useEffect(() => {
-    toastDispatch({ type: "HIDE", payload: "" });
-  }, [toastDispatch]);
+//     useEffect(() => {
+//     toastDispatch({ type: "HIDE", payload: "" });
+//   }, [toastDispatch]);
 
     return(
         <div class="main-head text-center">

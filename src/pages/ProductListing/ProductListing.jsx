@@ -1,4 +1,4 @@
-import { useToast, useFilter } from "../../context";
+import { useToast, useFilter} from "../../context";
 import { useState, useEffect } from "react";
 import { setTitle } from "../../utils/set-title";
 import axios from "axios";
@@ -24,6 +24,8 @@ const ProductListing = () => {
   const ratedProducts = getRatedProducts(filterState, pricedProducts);
   const checkedProductList = getCheckedProducts(filterState, ratedProducts);
   const sortedProductList = getSortedProducts(filterState, checkedProductList);
+
+  const {showToast}= useToast();
   setTitle(title);
   useEffect(() => {
     (async () => {
@@ -32,17 +34,17 @@ const ProductListing = () => {
           data: { products },
         } = await axios.get("/api/products");
         setProductList(products);
-        toastDispatch({ type: "HIDE", payload: "" });
+        // toastDispatch({ type: "HIDE", payload: "" });
         filterDispatch({
           type: "FILTER_BY_CATEGORY",
           payload: category,
         });
       } catch {
-        toastDispatch({
-          type: "SHOW",
-          payload: "Cannot fetch data right now.",
-        });
-      }
+        // toastDispatch({
+        //   type: "SHOW",
+        //   payload: "Cannot fetch data right now.",
+        // });
+        showToast("Cannot fetch data right now. Try again after some time", "error");      }
     })();
 
     
@@ -50,24 +52,26 @@ const ProductListing = () => {
 
   return (
     <div >
-      <main>
+      {/* <main> */}
             <div class="product-list">
               {/* grid grid-product-cols-2 */}
               <div className="product-list-filter">
                 <Filter/>
               </div>
-              <div class="product-list-main ">
+              <div class="product-list-main">
                 <h2 class="main-heading h-3 ">BottleCart Products</h2>
 
-                <div className="product-wrapper">
-                  
-                  {sortedProductList.map((item)=> 
-                  <VerticalCard product={item} key={item._id}/>)
-                  }
+                <div className="product-container">
+                  <div className="product-wrapper">
+                  {/* <div className="product-wrapping-lists"> */}
+                    {sortedProductList.map((item)=> 
+                    <VerticalCard product={item} key={item._id}/>)
+                    }
+                  </div>
                 </div>
               </div>
             </div>
-        </main>
+        {/* </main> */}
     </div>
   );
 };

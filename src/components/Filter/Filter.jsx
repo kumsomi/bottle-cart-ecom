@@ -5,12 +5,6 @@ import { Checkbox } from "../Button/Checkbox";
 import { RadioButton } from "../Button/RadioButton";
 import { Rating } from "../Rating/Rating";
 
-// import { categories } from "../../backend/db/categories";
-// import { categoryList } from "../../data/homeData";
-// import { Checkbox } from "../Button/Checkbox";
-// import { RadioButton } from "../Button/RadioButton";
-// import { Rating } from "../Rating/Rating";
-
 const priceRangeList = [0, 700, 1500];
 
 const Filter = () => {

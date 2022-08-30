@@ -29,17 +29,25 @@ const location = useLocation();
 
             <div className="navigation-brand-link">
                 <ul className="no-bullet spaced-list mt-1">
-                    <NavBadgeIcon
+                    {cartState.itemsInCart.length>0 ? <NavBadgeIcon
                         linkTo="/cart"
                         iconclassName={"fas fa-shopping-cart"}
                         badgeCount={cartState.itemsInCart.length}
-                    />
+                    />: <NavIcon
+                    linkTo="/cart"
+                    iconclassName={"fas fa-shopping-cart"}
+                />}
                     
-                    <NavBadgeIcon
+                    
+                    {cartState.wishlistItems.length>0 ? <NavBadgeIcon
                         linkTo="/wishlist"
                         iconclassName={"fab fa-gratipay"}
                         badgeCount={cartState.wishlistItems.length}
-                    />
+                    /> :<NavIcon
+                    linkTo="/wishlist"
+                    iconclassName={"fab fa-gratipay"}
+                />}
+                    
                     
                     <NavIcon
                         linkTo="/login"
