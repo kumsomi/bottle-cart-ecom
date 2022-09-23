@@ -3,22 +3,27 @@
 
 .App {
   display: grid;
-  grid-template-rows: 15vh 68vh 17vh ;
+  grid-template-rows: 15vh 85vh;
+  /* grid-template-rows: 1fr 5fr ; */
+  /* 17vh ; */
   grid-template-areas: 
   "first"
   "second"
-  "third";
 }
 .nav-mode{
-  grid-area: nav;
+  grid-area: first;
 }
 .main-mode{
   grid-area: second;
-  overflow: auto;
+  /* overflow: auto; */
 }
-.footer-mode{
+/* .footer-mode{
   grid-area: third;
-}
+} */
 .head-heading{
   color: var(--secondary-color);
+}
+.btn{
+  font-weight: bold;
+    font-family: inherit;
 }

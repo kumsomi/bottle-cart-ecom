@@ -7,7 +7,6 @@ const CartProvider = ({ children }) => {
   const [cartState, cartDispatch] = useReducer(cartReducer, {
     quantity: 0,
     totalPrice: 0,
-    // totalDiscountedPrice: 0,
     itemsInCart: [],
     wishlistItems: [],
   });
