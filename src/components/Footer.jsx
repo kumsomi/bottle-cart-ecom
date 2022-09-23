@@ -1,6 +1,6 @@
 const Footer=()=>{
     return(
-        <footer class="footer flex flex-direction-row flex-wrap text-left p-1">
+        <footer className="footer flex flex-direction-row flex-wrap text-left p-1">
             {/* <div>
                 <h2 class="h-3">BottleCart</h2>
             </div>

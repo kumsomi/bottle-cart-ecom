@@ -22,7 +22,7 @@ const RadioButton = (
       <label htmlFor={value} className="label-content padding-xs">
         {value}
       </label> */}
-      <label class="para-4" htmlFor={value}>
+      <label className="para-4" htmlFor={value}>
         <input type="radio" 
           id={value}
           name={name}

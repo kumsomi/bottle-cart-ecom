@@ -11,4 +11,5 @@ export {CartProduct} from "./cartProduct";
 export {Rating} from "./Rating/Rating";
 export {RadioButton} from "./Button/RadioButton";
 export {Checkbox} from "./Button/Checkbox";
+export { PageFooter } from "./Page-footer";
 // export {Checkout} from "./checkout";

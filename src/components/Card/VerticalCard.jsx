@@ -6,18 +6,18 @@ const VerticalCard = ({ product }) => {
   const { cartState, cartDispatch } = useCart();
   const {showToast}=useToast();
   return (
-    <article class="card vertical card-shadow card-hover">
+    <article className="card vertical card-shadow card-hover">
 
         {/* <!-- Card image --> */}
-        <section class="card-image-container flex flex-wrap">
-        <img src={product.image} alt={`${product.image}`} class="card-image" />
+        <section className="card-image-container flex flex-wrap">
+        <img src={product.image} alt={`${product.image}`} className="card-image" />
         </section>
 
         {/* <!-- Card content --> */}
-        <section class="card-content">
-        <h1 class="card-title">{product.title}</h1>
-        <p class="card-category">{product.category}</p>
-        <span class="card-price-tag">
+        <section className="card-content">
+        <h1 className="card-title">{product.title}</h1>
+        <p className="card-category">{product.category}</p>
+        <span className="card-price-tag">
             <p>{`Rs ${product.price}`}</p>
         </span>
         {/* Rating */}
@@ -33,8 +33,8 @@ const VerticalCard = ({ product }) => {
         </section>
 
         {/* Wishlist  */}
-        <section class="card-tag">
-            <span class="icon-btn">
+        <section className="card-tag">
+            <span className="icon-btn">
               {cartState.wishlistItems.some((item) => item._id === product._id) ? (
                 <i
                   className="fas fa-heart"
@@ -77,9 +77,9 @@ const VerticalCard = ({ product }) => {
             <span className="flex "
             // className="card-btn card-cart"
             >
-              <span class="cart-icon m-0p1"><i class="fas fa-shopping-cart"></i></span>
+              <span className="cart-icon m-0p1"><i className="fas fa-shopping-cart"></i></span>
               <p 
-              class="cart-text"
+              className="cart-text"
               >Go to Cart</p>
             </span>
           </Link>
@@ -95,9 +95,9 @@ const VerticalCard = ({ product }) => {
             }
             }
           >
-            <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+            <span className="cart-icon"><i className="fas fa-shopping-cart"></i></span>
             <p 
-            class="cart-text"
+            className="cart-text"
             >Add to Cart</p>
           </button>
         )}

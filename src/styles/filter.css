@@ -8,16 +8,11 @@
 }
 .filter-btn{
     font-family: 'Roboto Serif', sans-serif;
-    /* color:var(--cta-color); */
     font-weight: bold;
-    margin-left: auto;
-    /* border: 0; */
+    
+    width: fit-content;
 }
 .filter-btn:hover{
     background-color: var(--primary-color);
     color:var(--cta-color);
 }
-/* .product-filter{
-    top:0;
-    
-} */

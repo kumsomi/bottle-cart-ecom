@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useToast, useFilter } from "../../context";
+import { useFilter } from "../../context";
 import { Checkbox } from "../Button/Checkbox";
 import { RadioButton } from "../Button/RadioButton";
 import { Rating } from "../Rating/Rating";
@@ -8,26 +8,27 @@ import { Rating } from "../Rating/Rating";
 const priceRangeList = [0, 700, 1500];
 
 const Filter = () => {
-  const { toastDispatch } = useToast();
+  // const { toastDispatch } = useToast();
   const { filterState, filterDispatch } = useFilter();
   const [categories, setCategories] = useState([]);
-
+  // const {showToast}=useToast();
   useEffect(() => {
     (async () => {
       try {
         const response = await axios.get("/api/categories");
         setCategories(response.data.categories);
-      } catch {
-        toastDispatch({ type: "SHOW" });
+      } 
+      catch {
+        // toastDispatch({ type: "SHOW" });
       }
     })();
-  }, [toastDispatch]);
+  });
 
   return (
 
-    <div class="product-filter m-1">
+    <div className="product-filter m-1">
       <button
-        className="btn link-btn ml-auto filter-btn"
+        className="btn link-btn filter-btn"
         onClick={() =>
           filterDispatch({
             type: "CLEAR",
@@ -36,8 +37,8 @@ const Filter = () => {
       >
        Clear Filters
      </button>
-      <div class="filters flex flex-direction-col">
-        <div class="filter-heading">Categories</div>
+      <div className="filters flex flex-direction-col">
+        <div className="filter-heading">Categories</div>
           {categories.map((item, index) => (
               <div key={index}>
                 <Checkbox 
@@ -50,8 +51,8 @@ const Filter = () => {
               </div>
           ))}
       </div>
-      <div class="filters flex flex-direction-col">
-          <div class="filter-heading">
+      <div className="filters flex flex-direction-col">
+          <div className="filter-heading">
             <label htmlFor="priceRange">
             Price: 0 to {filterState.price}
             </label>
@@ -72,7 +73,7 @@ const Filter = () => {
               })
             }
           />
-          <div class="slider-price-range flex flex-direction-row align-i-ctr">
+          <div className="slider-price-range flex flex-direction-row align-i-ctr">
             {priceRangeList.map((item, index)=>(
               <span key={index}>{item}</span>
             ))}
@@ -80,8 +81,8 @@ const Filter = () => {
       </div>
 
 
-      <div class="filters flex flex-direction-col">
-      <div class="filter-heading">Rating</div>
+      <div className="filters flex flex-direction-col">
+      <div className="filter-heading">Rating</div>
           
           <Rating
           value={`4 Stars & above`}
@@ -109,8 +110,8 @@ const Filter = () => {
           />
         
       </div>
-      <div class="filters flex flex-direction-col">
-      <div class="filter-heading">Sort By</div>
+      <div className="filters flex flex-direction-col">
+      <div className="filter-heading">Sort By</div>
         <RadioButton
           value={`Price- Low to High`}
           name="sortBy"

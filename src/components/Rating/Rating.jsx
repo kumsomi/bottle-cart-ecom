@@ -5,11 +5,11 @@ const Rating = (
   const { filterState, filterDispatch } = useFilter();
   return (
     <>
-      {/* <label htmlFor={value} class="para-4">
+      {/* <label htmlFor={value} className="para-4">
         <input type="radio" name={name} id={value} onChange={() =>{}}/>
           {value}
       </label> */}
-      <label class="para-4" for="2">
+      <label className="para-4" htmlFor="2">
         <input type="radio" 
         id={value}
         name={name}

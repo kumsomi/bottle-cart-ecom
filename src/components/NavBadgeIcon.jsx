@@ -7,7 +7,7 @@ const NavBadgeIcon = ({ linkTo, iconclassName, badgeCount }) => {
             <span className="badge-icon icon-btn">
               <i className={`${iconclassName}`}></i>
             </span> 
-          <p class="badge-text top right ">{badgeCount}</p>  
+          <p className="badge-text top right ">{badgeCount}</p>  
         </div>
       </Link>
   );
